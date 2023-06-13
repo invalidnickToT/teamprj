@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.market.lemon.command.MainCommand;
+import co.market.lemon.command.ProductInsert;
 import co.market.lemon.common.Command;
 import co.market.lemon.member.command.AjaxCheckId;
 import co.market.lemon.member.command.MemberInsert;
@@ -22,6 +23,8 @@ import co.market.lemon.member.command.MemberLoginForm;
 import co.market.lemon.mypage.command.MemberUpdate;
 import co.market.lemon.mypage.command.MemberUpdateForm;
 import co.market.lemon.mypage.command.Mypage;
+import co.market.lemon.product.command.ProductInsertForm;
+import co.market.lemon.product.command.ProductList;
 
 /**
  * Servlet implementation class FrontController
@@ -51,8 +54,14 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxCheckId.do", new AjaxCheckId());
 		
 		map.put("/mypage.do", new Mypage());
+
+		map.put("/productList.do", new ProductList());
+		map.put("/productInsertForm.do", new ProductInsertForm());
+		map.put("/productInsert.do", new ProductInsert());
+
 		map.put("/memberUpdateForm.do", new MemberUpdateForm());
 		map.put("/memberUpdate.do", new MemberUpdate());
+
 		
 		
 	}
