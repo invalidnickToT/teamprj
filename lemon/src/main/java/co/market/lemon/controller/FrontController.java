@@ -19,6 +19,7 @@ import co.market.lemon.member.command.MemberInsert;
 import co.market.lemon.member.command.MemberInsertForm;
 import co.market.lemon.member.command.MemberLogin;
 import co.market.lemon.member.command.MemberLoginForm;
+import co.market.lemon.mypage.command.Mypage;
 
 /**
  * Servlet implementation class FrontController
@@ -46,6 +47,10 @@ public class FrontController extends HttpServlet {
 		map.put("/memberInsert.do", new MemberInsert());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/ajaxCheckId.do", new AjaxCheckId());
+		map.put(" ㅅㄷㄴㅅㅅㄴㅅㄱ", null);
+		
+		map.put("/mypage.do", new Mypage());
+		
 		
 	}
 
