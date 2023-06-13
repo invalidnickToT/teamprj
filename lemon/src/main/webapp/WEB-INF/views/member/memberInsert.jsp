@@ -28,8 +28,8 @@
 						</tr>
 						<tr>
 							<th>* 비밀번호</th>
-							<td><input type="password" id="memberPw"
-								name="memberPw" required="required"></td>
+							<td><input type="password" id="memberPw" name="memberPw"
+								required="required"></td>
 						</tr>
 						<tr>
 							<th>* 비밀번호 확인</th>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.market.lemon.product.service.ProductMapper">
+	<select id="productSelectList"
+		resultType="co.market.lemon.product.service.ProductVO">
+		SELECT * FROM PRODUCT
+	</select>
+	<select id="productSelect"
+		resultType="co.market.lemon.product.service.ProductVO">
+		SELECT * FROM PRODUCT
+		WHERE PRODUCT_ID = #{productId}
+	</select>
+	<insert id="productInsert">
+		INSERT INTO PRODUCT
+		VALUES (product_seq.nextval,
+		#{productCategory}, #{productInfo}, #{productWriter}, #{productTitle},
+		#{productPrice},
+		#{productSubject}, SYSDATE, 0, 'before')
+	</insert>
+
+	<update id="productUpdate">
+		update product
+		<set>
+			<if test="productWriter != null">PRODUCT_WRITER = #{productWriter},</if>
+			<if test="productTitle != null">PRODUCT_TITLE = #{productTitle},</if>
+			<if test="productWdate != null">PRODUCT_WDATE = #{productWdate},</if>
+			<if test="productPrice != null">PRODUCT_PRICE = #{productPrice}</if>
+			<if test="productSubject != null">PRODUCT_SUBJECT = #{productSubject}</if>
+			<if test="productState != null">PRODUCT_STATE = #{productState}</if>
+		</set>
+	</update>
+
+	<delete id="productDelete">
+		DELETE FROM PRODUCT WHERE PRODUCT_ID = #{productId}
+	</delete>
+
+</mapper>
