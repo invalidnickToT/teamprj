@@ -49,7 +49,7 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxCheckId.do", new AjaxCheckId());
 		
 		map.put("/mypage.do", new Mypage());
-		//송이송이송이
+		
 		
 	}
 
