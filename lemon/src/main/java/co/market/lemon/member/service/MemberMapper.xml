@@ -20,7 +20,24 @@
 		VALUES (#{memberId}, #{memberPw}, #{memberName}, #{memberTel}, 'N', 0)
 	</insert>
 	
-	<update id="memberUpdate">
+	<update id="memberUpdate">	
+		<if test="memberPw != null">
+		UPDATE MEMBER
+		SET MEMBER_PW = #{memberPw}
+		WHERE MEMBER_ID = #{memberId}
+		</if>	
+		
+		<if test="memberName != null">
+		UPDATE MEMBER
+		SET MEMBER_NAME = #{memberName}
+		WHERE MEMBER_ID = #{memberId}
+		</if>	
+		
+		<if test="memberTel != null">
+		UPDATE MEMBER
+		SET MEMBER_TEL = #{memberTel}
+		WHERE MEMBER_ID = #{memberId}	
+		</if>
 	</update>
 	
 	<delete id="memberDelete">
