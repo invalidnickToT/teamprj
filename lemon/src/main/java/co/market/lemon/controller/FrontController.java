@@ -51,6 +51,7 @@ public class FrontController extends HttpServlet {
 		
 		map.put("/mypage.do", new Mypage());
 		
+		
 	}
 
 	/**
