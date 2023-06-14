@@ -20,7 +20,7 @@ public class ProductVO {
 //	PRODUCT_VIEW	NUMBER
 //	PRODUCT_STATE	VARCHAR2(10 BYTE)
 
-	private int productID;
+	private int productId;
 	private String productCategory;
 	private String productInfo;
 	private String productWriter;
