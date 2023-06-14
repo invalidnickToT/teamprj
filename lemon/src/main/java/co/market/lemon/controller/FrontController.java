@@ -20,6 +20,8 @@ import co.market.lemon.member.command.MemberInsert;
 import co.market.lemon.member.command.MemberInsertForm;
 import co.market.lemon.member.command.MemberLogin;
 import co.market.lemon.member.command.MemberLoginForm;
+import co.market.lemon.mypage.command.MemberDelete;
+import co.market.lemon.mypage.command.MemberDeleteForm;
 import co.market.lemon.mypage.command.MemberUpdate;
 import co.market.lemon.mypage.command.MemberUpdateForm;
 import co.market.lemon.mypage.command.Mypage;
@@ -55,19 +57,26 @@ public class FrontController extends HttpServlet {
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/ajaxCheckId.do", new AjaxCheckId());
 		
-		map.put("/mypage.do", new Mypage());
+		
 
 		map.put("/productList.do", new ProductList());
 		map.put("/productInsertForm.do", new ProductInsertForm());
 		map.put("/productInsert.do", new ProductInsert());
 
-		map.put("/memberUpdateForm.do", new MemberUpdateForm());
-		map.put("/memberUpdate.do", new MemberUpdate());
+		
+		map.put("/mypage.do", new Mypage());  //마이페이지
+		map.put("/memberUpdateForm.do", new MemberUpdateForm());  //수정 폼 호출
+		map.put("/memberUpdate.do", new MemberUpdate());  //수정 실행
+		map.put("/memberDeleteForm.do", new MemberDeleteForm());  //삭제 폼 호출
+		map.put("/memberDelete.do", new MemberDelete());  //삭제 실행
+
+
 		
 		
 		//주현이 영역~~~ notice
 		map.put("/noticeInsertForm.do", new noticeInsertForm());
 		map.put("/noticeSelect.do", new noticeSelect());
+
 		
 		
 	}
