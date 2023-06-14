@@ -25,6 +25,7 @@ import co.market.lemon.mypage.command.MemberUpdateForm;
 import co.market.lemon.mypage.command.Mypage;
 import co.market.lemon.product.command.ProductInsertForm;
 import co.market.lemon.product.command.ProductList;
+import co.market.lemon.product.command.ProductSelect;
 
 /**
  * Servlet implementation class FrontController
@@ -56,6 +57,7 @@ public class FrontController extends HttpServlet {
 		map.put("/mypage.do", new Mypage());
 
 		map.put("/productList.do", new ProductList());
+		map.put("/productSelect.do", new ProductSelect());
 		map.put("/productInsertForm.do", new ProductInsertForm());
 		map.put("/productInsert.do", new ProductInsert());
 

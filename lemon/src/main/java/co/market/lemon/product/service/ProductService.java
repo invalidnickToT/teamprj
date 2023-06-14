@@ -14,4 +14,6 @@ public interface ProductService {
 	int productDelete(ProductVO vo);
 
 	ProductVO productLogin(ProductVO vo);
+	
+	int productHitUpdate(ProductVO vo);
 }
