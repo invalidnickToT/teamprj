@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 
 public class NoticeVO {
-	private String noticeId;
+	private int noticeId;
 	private String noticeTitle;
 	private String noticeSubject;
 	private String noticeWdate;

@@ -8,17 +8,20 @@ import co.market.lemon.notice.service.NoticeService;
 import co.market.lemon.notice.service.NoticeVO;
 import co.market.lemon.notice.serviceImpl.NoticeServiceImpl;
 
-public class noticeSelect implements Command {
+public class noticeUpdate implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		NoticeService ns= new NoticeServiceImpl();
-		NoticeVO vo=new NoticeVO();
-		
-		vo.setNoticeId(Integer.valueOf(request.getParameter("noticeId")));
-		vo=ns.noticeSelect(vo);
-		request.setAttribute("notice", vo);
-		return "notice/noticeDetail";
+		NoticeService ns=new NoticeServiceImpl();
+		NoticeVO vo= new NoticeVO();
+		vo.setNoticeId(Integer.valueOf("noticeId"));
+		int i=ns.noticeUpdate(vo);
+		if(i>0) {
+			request.setAttribute("message", "공지사항이 수정되었습니다");
+		}else {
+			request.setAttribute("message", "공지사항을 수정하지 못했습니다");
+		}
+		return "member/memberMessage";
 	}
 
 }

@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.market.lemon.adminpage.command.AdminMypage;
 import co.market.lemon.command.MainCommand;
-import co.market.lemon.command.ProductInsert;
 //co.market.lemon.product.productInsert로 
 import co.market.lemon.common.Command;
 import co.market.lemon.member.command.AjaxCheckId;
@@ -22,23 +21,24 @@ import co.market.lemon.member.command.MemberInsert;
 import co.market.lemon.member.command.MemberInsertForm;
 import co.market.lemon.member.command.MemberLogin;
 import co.market.lemon.member.command.MemberLoginForm;
-
 import co.market.lemon.member.command.MemberLogout;
 import co.market.lemon.mypage.command.MemberDelete;
 import co.market.lemon.mypage.command.MemberDeleteForm;
 import co.market.lemon.mypage.command.MemberUpdate;
 import co.market.lemon.mypage.command.MemberUpdateForm;
-
 import co.market.lemon.mypage.command.Mypage;
-
+import co.market.lemon.notice.command.noticeDelete;
 import co.market.lemon.notice.command.noticeInsertForm;
+import co.market.lemon.notice.command.noticeMain;
 import co.market.lemon.notice.command.noticeSelect;
-
+import co.market.lemon.notice.command.noticeUpdate;
+import co.market.lemon.notice.command.noticeUpdateForm;
+import co.market.lemon.product.command.ProductInsert;
 import co.market.lemon.product.command.ProductInsertForm;
 import co.market.lemon.product.command.ProductList;
+import co.market.lemon.product.command.ProductSelect;
 import co.market.lemon.product.command.ProductUpdate;
 import co.market.lemon.product.command.ProductUpdateForm;
-import co.market.lemon.product.command.ProductSelect;
 
 
 /**
@@ -61,7 +61,7 @@ public class FrontController extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-    //공통부분
+		//공통부분
 		map.put("/main.do", new MainCommand());
 		map.put("/memberInsertForm.do", new MemberInsertForm());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
@@ -71,10 +71,10 @@ public class FrontController extends HttpServlet {
 
 		//상희zone
 		map.put("/memberLogout.do", new MemberLogout());
-    map.put("/adminMypage.do", new AdminMypage());
+		map.put("/adminMypage.do", new AdminMypage());
 
 
-    //혜련zone
+        //혜련zone
 		map.put("/productList.do", new ProductList());
 		map.put("/productSelect.do", new ProductSelect());
 		map.put("/productInsertForm.do", new ProductInsertForm());
@@ -97,8 +97,12 @@ public class FrontController extends HttpServlet {
 		
 		
 		//주현이 영역~~~ notice
+		map.put("/noticeMain.do", new noticeMain());
 		map.put("/noticeInsertForm.do", new noticeInsertForm());
 		map.put("/noticeSelect.do", new noticeSelect());
+		map.put("/noticeUpdate.do", new noticeUpdate());
+		map.put("/noticeDelete", new noticeDelete());
+		map.put("/noticeUpdateForm.do", new noticeUpdateForm());
 
 
 
