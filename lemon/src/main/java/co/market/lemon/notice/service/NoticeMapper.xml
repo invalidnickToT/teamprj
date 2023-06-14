@@ -5,6 +5,9 @@
 		resultType="co.market.lemon.notice.service.NoticeVO">
 		select * from notice
 	</select>
+	<select id="noticeSelect" resultType="co.market.lemon.notice.service.NoticeVO">
+		select * from notice where notice_id=#{noticeId}
+	</select>
 	
 	<insert id="noticeInsert">
 	insert into notice values(notice_seq.nextval,#{noticeTitle},#{noticeSubject},#{noticeWdate} )
