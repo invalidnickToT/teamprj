@@ -1,16 +1,16 @@
-package co.market.lemon.mypage.command;
+package co.market.lemon.notice.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.market.lemon.common.Command;
 
-public class MemberDeleteForm implements Command {
+public class noticeUpdateForm implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-
-		return "mypage/memberDelete";
+		request.setAttribute("noticeId", request.getParameter("noticeId"));
+		return "notice/noticeUpdate";
 	}
 
 }

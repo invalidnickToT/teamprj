@@ -34,7 +34,7 @@
 						<li><a href="#">식품</a></li>
 						<li><a href="#">잡화</a></li>
 						<li><a href="#">기타</a></li>
-						<li><a href="#">공지사항</a></li>
+						<li><a href="noticeMain.do">공지사항</a></li>
 					</ul>
 				</div>
 				<div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">

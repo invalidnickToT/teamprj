@@ -53,8 +53,14 @@
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 							<h2>${product.productTitle}</h2>
 							<p>
-								<a href="#" class="btn btn-primary btn-outline btn-lg">Add to Cart</a>
-								<a href="#" class="btn btn-primary btn-outline btn-lg">Compare</a>
+								<c:if test="${name ne product.productWriter}">
+									<a href="#" class="btn btn-primary btn-outline btn-lg">찜하기</a>
+								</c:if>
+								<c:if test="${name eq product.productWriter}">
+									<a href="#" class="btn btn-primary btn-outline btn-lg">수정</a>
+									<a href="#" class="btn btn-primary btn-outline btn-lg">삭제</a>
+								</c:if>
+									<a href="productList.do" class="btn btn-primary btn-outline btn-lg">목록</a>
 							</p>
 						</div>
 					</div>
@@ -89,13 +95,30 @@
 								<div class="col-md-10 col-md-offset-1">
 									<h3>댓글 목록</h3>
 									<div class="feed">
-										
-										</div>
+										<c:forEach items="${replyList}" var="replyList">
+											<div>
+												<blockquote>
+													<p>${replyList.replySubject}</p>
+												</blockquote>
+												<h3>&mdash; ${replyList.replyWriter}, ${replyList.replyWdate}</h3>
+										</c:forEach>
+										<c:if test="${not empty id }">
+											<form name="replyForm" method="post">
+												<div>
+													<label for="replyWriter">댓글 작성자</label><input type="text" id="replyWriter" name="replyWriter" value=${name} readonly="readonly" />
+													<br>
+													<label for="replyWriter">댓글 내용</label><input type="text" id="replySubject" name="replySubject" />
+												</div>
+												<div>
+													<button type="button" class="btn btn-primary btn-outline btn-lg">댓글 작성</a>
+												</div>
+											</form>
+										</c:if>
+									</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>

@@ -2,6 +2,7 @@ package co.market.lemon.mypage.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import co.market.lemon.common.Command;
 import co.market.lemon.member.service.MemberService;
@@ -14,10 +15,14 @@ public class MemberUpdate implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		MemberService ms = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
+		HttpSession session = request.getSession();
+		session.setAttribute("id", vo.getMemberId());
+		
 		vo.setMemberPw(request.getParameter("memberPw"));
 		vo.setMemberName(request.getParameter("memberName"));
 		vo.setMemberTel(request.getParameter("memberTel"));
-       
+		vo.setMemberId(request.getParameter("memberId"));
+		
 		int n = ms.memberUpdate(vo);
 		if(n != 0) {
 			request.setAttribute("message", "회원 정보가 수정되었습니다.");

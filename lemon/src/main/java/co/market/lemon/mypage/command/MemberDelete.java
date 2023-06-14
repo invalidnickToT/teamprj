@@ -2,6 +2,7 @@ package co.market.lemon.mypage.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import co.market.lemon.common.Command;
 import co.market.lemon.member.service.MemberService;
@@ -14,7 +15,12 @@ public class MemberDelete implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		MemberService ms = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
+		HttpSession session = request.getSession();
+		session.setAttribute("id", vo.getMemberId());
+
+
 		vo.setMemberId(request.getParameter("memberId"));
+		
 		
 		int n = ms.memberDelete(vo);
 		if(n != 0) {
@@ -24,5 +30,8 @@ public class MemberDelete implements Command {
 		}
 		return "member/memberMessage";
 	}
+	
+	
+	
 
 }

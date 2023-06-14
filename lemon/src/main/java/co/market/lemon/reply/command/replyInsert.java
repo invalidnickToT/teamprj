@@ -1,16 +1,16 @@
-package co.market.lemon.mypage.command;
+package co.market.lemon.reply.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.market.lemon.common.Command;
 
-public class MemberDeleteForm implements Command {
+public class replyInsert implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-
-		return "mypage/memberDelete";
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -16,7 +16,7 @@ public class ProductServiceImpl implements ProductService {
 	
 	@Override
 	public List<ProductVO> productSelectList() {
-		return productSelectList();
+		return map.productSelectList();
 	}
 	
 	@Override
@@ -26,17 +26,17 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public int productInsert(ProductVO vo) {
-		return productInsert(vo);
+		return map.productInsert(vo);
 	}
 
 	@Override
 	public int productUpdate(ProductVO vo) {
-		return productUpdate(vo);
+		return map.productUpdate(vo);
 	}
 
 	@Override
 	public int productDelete(ProductVO vo) {
-		return productDelete(vo);
+		return map.productDelete(vo);
 	}
 
 	@Override

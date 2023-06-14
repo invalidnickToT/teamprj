@@ -12,9 +12,8 @@
 		
 		<div>
 			<form id="frm" action="memberUpdate.do" method="post" onsubmit="return fnSubmit()" onreset="return fnReset()">		
-				<input type="hidden" id="memberId" name="memberId" value="${id}">
 				<div>
-					<table border="1">
+					<table>
 						<tr>
 							<td>아이디</td>	
 							<td>
@@ -22,21 +21,27 @@
 							</td>
 						</tr>
 						<tr>
+							<td>이름</td>
+							<td>
+								<input type="text" id="memberName" name="memberName" value="${member.memberName }">
+							</td>
+						</tr>
+						<tr>
 							<td>비밀번호</td>
 							<td>
-								<input type="password" id="memberPw" name="memberPw" value="${memberPw }">
+								<input type="password" id="memberPw" name="memberPw" value="${member.memberPw }">
 							</td>
 						</tr>
 						<tr>
 							<td>연락처</td>
 							<td>
-								<input type="text" name="memberTel" value="${memberTel }">
+								<input type="text" id="memberTel" name="memberTel" value="${member.memberTel }">
 							</td>
 						</tr>
 					</table><br>
 				</div>
 				<div>
-					<input type="submit" value="수정">
+					<input type="submit" value="수정">&nbsp;&nbsp;
 					<input type="reset" value="초기화">
 				</div>
 			</form>
@@ -58,6 +63,8 @@
 			}
 			return false;
 		}
+		
+		
 	</script>
 </body>
 
