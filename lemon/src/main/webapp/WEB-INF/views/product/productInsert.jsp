@@ -30,13 +30,11 @@
 					</tr>
 					<tr>
 						<th>* 제목</th>
-						<!-- 	select tag쓰고 싶어요 -->
 						<td><input type="text" id="productTitle" name="productTitle"
 							required="required"></td>
 					</tr>
 					<tr>
 						<th>* 판매 가격</th>
-						<!-- 	select tag쓰고 싶어요 -->
 						<td><input type="number" id="productPrice"
 							name="productPrice" required="required"></td>
 					</tr>
@@ -46,18 +44,9 @@
 						<td><input type="text" id="productSubject"
 							name="productSubject" required="required"></td>
 					</tr>
-
 				</table>
-
-
 			</div>
-
-
-
 		</form>
-
 	</div>
-
-
 </body>
 </html>
