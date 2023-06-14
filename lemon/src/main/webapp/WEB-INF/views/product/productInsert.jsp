@@ -23,10 +23,13 @@
 							name="productCategory" required="required"></td>
 					</tr>
 					<tr>
-						<th>* 거래유형 선택</th>
-						<!-- 	select tag쓰고 싶어요 -->
-						<td><input type="text" id="productInfo" name="productInfo"
-							required="required"></td>
+						<th>거래유형 선택</th>
+						<td>
+							<select id="productInfo" name="productInfo">
+									<option value="삽니다">삽니다</option>
+									<option value="팝니다">팝니다</option>
+							</select>
+						</td>
 					</tr>
 					<tr>
 						<th>* 제목</th>
@@ -40,7 +43,6 @@
 					</tr>
 					<tr>
 						<th>* 내용</th>
-						<!-- 	select tag쓰고 싶어요 -->
 						<td><input type="text" id="productSubject"
 							name="productSubject" required="required"></td>
 					</tr>

@@ -21,7 +21,6 @@ public class NoticeServiceImpl implements NoticeService {
 
 	@Override
 	public NoticeVO noticeSelect(NoticeVO vo) {
-		// TODO Auto-generated method stub
 		return map.noticeSelect(vo);
 	}
 

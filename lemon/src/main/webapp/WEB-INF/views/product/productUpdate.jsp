@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +18,12 @@
 					<table>
 						<tr>
 							<th>거래유형 선택</th>
-							<!-- 	select tag쓰고 싶어요 -->
-							<td><input type="text" id="productInfo" name="productInfo"
-								required="required"></td>
+							<td>
+								<select id= "productInfo" name="productInfo">
+										<option value="삽니다">삽니다</option>
+										<option value="팝니다">팝니다</option>
+							</select>
+								</td>
 						</tr>
 						<tr>
 							<th>제목</th>
