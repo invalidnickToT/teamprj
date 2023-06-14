@@ -38,6 +38,7 @@ import co.market.lemon.product.command.ProductList;
 import co.market.lemon.product.command.ProductSelect;
 import co.market.lemon.product.command.ProductUpdate;
 import co.market.lemon.product.command.ProductUpdateForm;
+import co.market.lemon.reply.command.replyInsert;
 import co.market.lemon.product.command.ProductDelete;
 import co.market.lemon.product.command.productIDeleteForm;
 
@@ -76,11 +77,10 @@ public class FrontController extends HttpServlet {
 		map.put("/adminMypage.do", new AdminMypage());
 
 
-
     //혜련zone
 
+
 		map.put("/productList.do", new ProductList());
-		map.put("/productSelect.do", new ProductSelect());
 		map.put("/productInsertForm.do", new ProductInsertForm());
 		map.put("/productInsert.do", new ProductInsert());
 
@@ -100,8 +100,6 @@ public class FrontController extends HttpServlet {
 
   
 
-		
-		
 		//주현이 영역~~~ notice
 		map.put("/noticeMain.do", new noticeMain());
 		map.put("/noticeInsertForm.do", new noticeInsertForm());
@@ -111,9 +109,10 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeUpdateForm.do", new noticeUpdateForm());
 
 
-
 		//나리zone
-		
+		map.put("/productSelect.do", new ProductSelect());
+		map.put("/replyInsert.do", new replyInsert());
+
 	}
 
 	/**

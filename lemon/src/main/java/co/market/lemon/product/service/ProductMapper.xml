@@ -3,7 +3,7 @@
 <mapper namespace="co.market.lemon.product.service.ProductMapper">
 	<select id="productSelectList"
 		resultType="co.market.lemon.product.service.ProductVO">
-		SELECT * FROM PRODUCT
+		SELECT * FROM PRODUCT ORDER BY 1 DESC
 	</select>
 	<select id="productSelect"
 		resultType="co.market.lemon.product.service.ProductVO">
@@ -35,7 +35,7 @@
 	</delete>
 	
 	<update id="productHitUpdate" parameterType="co.market.lemon.product.service.ProductVO">
-		UPDATE PRODUCT SET PRODUCT_HIT = PRODUCT_HIT + 1 WHERE PRODUCT_ID = #{productId}
+		UPDATE PRODUCT SET PRODUCT_VIEW = PRODUCT_VIEW + 1 WHERE PRODUCT_ID = #{productId}
 	</update>
 
 </mapper>
