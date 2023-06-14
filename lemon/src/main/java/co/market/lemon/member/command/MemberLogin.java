@@ -27,7 +27,12 @@ public class MemberLogin implements Command {
 			session.setAttribute("name", vo.getMemberName());
 			session.setAttribute("grade", vo.getMemberGrade());
 			session.setAttribute("pw", vo.getMemberPw());
-			return "main/main";
+			if (vo.getMemberGrade().equals("T")) {
+				return "main/mainTLoginPage";
+			} else {
+				return "main/main";
+			}
+
 		} else {
 			request.setAttribute("message", "아이디 또는 비밀번호가 틀렸습니다.");
 			return "member/memberLoginMessage";

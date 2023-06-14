@@ -12,8 +12,8 @@
 	</div>
 	<div>
 		<ul>
-			<li><a href="#">회원 조회</a></li>
-			<li><a href="#">신고 조회</a></li>
+			<li><a href="memberSelectList.do">회원 조회</a></li>
+			<li><a href="memberReportList.do">신고 조회</a></li>
 		</ul>
 	</div>
 </body>
