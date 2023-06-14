@@ -12,21 +12,34 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.market.lemon.adminpage.command.AdminMypage;
 import co.market.lemon.command.MainCommand;
 import co.market.lemon.command.ProductInsert;
+//co.market.lemon.product.productInsert로 
 import co.market.lemon.common.Command;
 import co.market.lemon.member.command.AjaxCheckId;
 import co.market.lemon.member.command.MemberInsert;
 import co.market.lemon.member.command.MemberInsertForm;
 import co.market.lemon.member.command.MemberLogin;
 import co.market.lemon.member.command.MemberLoginForm;
+
+import co.market.lemon.member.command.MemberLogout;
+import co.market.lemon.mypage.command.MemberDelete;
+import co.market.lemon.mypage.command.MemberDeleteForm;
 import co.market.lemon.mypage.command.MemberUpdate;
 import co.market.lemon.mypage.command.MemberUpdateForm;
+
 import co.market.lemon.mypage.command.Mypage;
+
+import co.market.lemon.notice.command.noticeInsertForm;
+import co.market.lemon.notice.command.noticeSelect;
+
 import co.market.lemon.product.command.ProductInsertForm;
 import co.market.lemon.product.command.ProductList;
 import co.market.lemon.product.command.ProductUpdate;
 import co.market.lemon.product.command.ProductUpdateForm;
+import co.market.lemon.product.command.ProductSelect;
+
 
 /**
  * Servlet implementation class FrontController
@@ -48,25 +61,48 @@ public class FrontController extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
+    //공통부분
 		map.put("/main.do", new MainCommand());
 		map.put("/memberInsertForm.do", new MemberInsertForm());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
 		map.put("/memberInsert.do", new MemberInsert());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/ajaxCheckId.do", new AjaxCheckId());
-		
-		map.put("/mypage.do", new Mypage());
 
+		//상희zone
+		map.put("/memberLogout.do", new MemberLogout());
+    map.put("/adminMypage.do", new AdminMypage());
+
+
+    //혜련zone
 		map.put("/productList.do", new ProductList());
+		map.put("/productSelect.do", new ProductSelect());
 		map.put("/productInsertForm.do", new ProductInsertForm());
 		map.put("/productInsert.do", new ProductInsert());
+
 		map.put("/productUpdateForm.do", new ProductUpdateForm());
 		map.put("/productUpdate.do", new ProductUpdate());
-		
-		map.put("/memberUpdateForm.do", new MemberUpdateForm());
-		map.put("/memberUpdate.do", new MemberUpdate());
+	
+
+
+		//송이zone
+		map.put("/mypage.do", new Mypage());  //마이페이지
+		map.put("/memberUpdateForm.do", new MemberUpdateForm());  //수정 폼 호출
+		map.put("/memberUpdate.do", new MemberUpdate());  //수정 실행
+		map.put("/memberDeleteForm.do", new MemberDeleteForm());  //삭제 폼 호출
+		map.put("/memberDelete.do", new MemberDelete());  //삭제 실행
+
+  
 
 		
+		
+		//주현이 영역~~~ notice
+		map.put("/noticeInsertForm.do", new noticeInsertForm());
+		map.put("/noticeSelect.do", new noticeSelect());
+
+
+
+		//나리zone
 		
 	}
 
