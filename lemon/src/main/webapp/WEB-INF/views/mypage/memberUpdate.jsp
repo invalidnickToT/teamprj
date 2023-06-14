@@ -33,29 +33,33 @@
 								<input type="text" name="memberTel" value="${memberTel }">
 							</td>
 						</tr>
-					</table>
+					</table><br>
 				</div>
 				<div>
 					<input type="submit" value="수정">
+					<input type="reset" value="초기화">
 				</div>
 			</form>
+			<div><a href="memberDeleteForm.do">회원탈퇴</a></div>
 		</div>
 	</div>	
+	
+	<script type="text/javascript">
+		function fnSubmit() {
+			if(confirm("정말 수정하시겠습니까?")) {
+				return true;
+			}
+			return false;
+		}
+		
+		function fnReset() {
+			if(confirm("정말 초기화하시겠습니까?")) {
+				return true;
+			}
+			return false;
+		}
+	</script>
 </body>
 
-<script type="text/javascript">
-function fnSubmit() {
-	if(confirm("정말 수정하시겠습니까?")) {
-		return true;
-	}
-	return false;
-}
 
-function fnReset() {
-	if(confirm("정말 초기화하시겠습니까?")) {
-		return true;
-	}
-	return false;
-}
-</script>
 </html>
