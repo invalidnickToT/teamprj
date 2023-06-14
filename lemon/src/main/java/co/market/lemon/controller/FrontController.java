@@ -23,6 +23,8 @@ import co.market.lemon.member.command.MemberLoginForm;
 import co.market.lemon.mypage.command.MemberUpdate;
 import co.market.lemon.mypage.command.MemberUpdateForm;
 import co.market.lemon.mypage.command.Mypage;
+import co.market.lemon.notice.command.noticeInsertForm;
+import co.market.lemon.notice.command.noticeSelect;
 import co.market.lemon.product.command.ProductInsertForm;
 import co.market.lemon.product.command.ProductList;
 
@@ -61,7 +63,11 @@ public class FrontController extends HttpServlet {
 
 		map.put("/memberUpdateForm.do", new MemberUpdateForm());
 		map.put("/memberUpdate.do", new MemberUpdate());
-
+		
+		
+		//주현이 영역~~~ notice
+		map.put("/noticeInsertForm.do", new noticeInsertForm());
+		map.put("/noticeSelect.do", new noticeSelect());
 		
 		
 	}

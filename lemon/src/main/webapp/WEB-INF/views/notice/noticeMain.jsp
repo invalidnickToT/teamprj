@@ -17,10 +17,27 @@
 		</thead>
 		<tbody>
 			<c:forEach items="${notice}" var="n">
-				<td>${n.noticeId }</td>
-				<td>${n.noticeTitle }</td>
+				<tr onclick="noticeChoice(${n.noticeId})">
+					<td>${n.noticeId }</td>
+					<td>${n.noticeTitle }</td>
+				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
+	<br>
+	<c:if test="${memeberGrade eq 'A'}">
+		<button type="button" onclick="location.herf='noticeInsertForm.do'">
+		공지작성
+		</button>
+	</c:if>
+	
+	<script>
+	function noticeChoice(noticeId){
+		let url="noticeSelect.do?noticeId="+noticeId;
+		location.href=url;
+	}
+	</script>
+
+	
 </body>
 </html>
