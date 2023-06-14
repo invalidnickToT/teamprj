@@ -13,8 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.market.lemon.adminpage.command.AdminMypage;
+import co.market.lemon.adminpage.command.MemberReportList;
+import co.market.lemon.adminpage.command.MemberSelect;
+import co.market.lemon.adminpage.command.MemberSelectList;
 import co.market.lemon.command.MainCommand;
-import co.market.lemon.command.ProductInsert;
+import co.market.lemon.product.command.ProductInsert;
 //co.market.lemon.product.productInsert로 
 import co.market.lemon.common.Command;
 import co.market.lemon.member.command.AjaxCheckId;
@@ -61,7 +64,7 @@ public class FrontController extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-    //공통부분
+		//공통부분
 		map.put("/main.do", new MainCommand());
 		map.put("/memberInsertForm.do", new MemberInsertForm());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
@@ -71,10 +74,13 @@ public class FrontController extends HttpServlet {
 
 		//상희zone
 		map.put("/memberLogout.do", new MemberLogout());
-    map.put("/adminMypage.do", new AdminMypage());
+		map.put("/adminMypage.do", new AdminMypage());
+		map.put("/memberSelectList.do", new MemberSelectList());
+		map.put("/memberReportList.do", new MemberReportList());
+		map.put("memberSelect.do", new MemberSelect());
 
 
-    //혜련zone
+    	//혜련zone
 		map.put("/productList.do", new ProductList());
 		map.put("/productSelect.do", new ProductSelect());
 		map.put("/productInsertForm.do", new ProductInsertForm());
