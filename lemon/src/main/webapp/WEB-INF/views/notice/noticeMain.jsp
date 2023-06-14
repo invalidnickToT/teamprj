@@ -16,8 +16,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${notice}" var="n">
-				<tr onclick="noticeChoice(${n.noticeId})">
+			<c:forEach items="${notices}" var="n">
+				<tr onclick="noticeChoice(${n.noticeId})"
+				onmouseover='this.style.background="#9fff80"'
+				onmouseleave='this.style.background="#FFFFFF"'>
 					<td>${n.noticeId }</td>
 					<td>${n.noticeTitle }</td>
 				</tr>
@@ -25,10 +27,10 @@
 		</tbody>
 	</table>
 	<br>
-	<c:if test="${memeberGrade eq 'A'}">
-		<button type="button" onclick="location.herf='noticeInsertForm.do'">
-		공지작성
-		</button>
+	<c:if test="${grade eq 'A'}">
+	<button type="button" onclick="location.href='noticeInsertForm.do'">
+	공지작성
+	</button>
 	</c:if>
 	
 	<script>
@@ -36,8 +38,9 @@
 		let url="noticeSelect.do?noticeId="+noticeId;
 		location.href=url;
 	}
+
 	</script>
 
-	
+
 </body>
 </html>
