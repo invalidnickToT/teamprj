@@ -39,12 +39,6 @@ public class ProductServiceImpl implements ProductService {
 		return productDelete(vo);
 	}
 
-	@Override
-	public ProductVO productLogin(ProductVO vo) {
-		return null;
-    //이거 하세요 제발 이게뭐죠?
-    // vo에도 고쳐주세요 제발
-	}
 
 	@Override
 	public int productHitUpdate(ProductVO vo) {

@@ -8,19 +8,22 @@ import co.market.lemon.product.service.ProductService;
 import co.market.lemon.product.service.ProductVO;
 import co.market.lemon.product.serviceImpl.ProductServiceImpl;
 
-public class ProductSelect implements Command {
+public class ProductDelete implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// 게시글 상세 보기
-//		ProductService ps = new ProductServiceImpl();
-//		ProductVO vo = new ProductVO();
-//		vo.setProductId(Integer.valueOf(request.getParameter("productId")));
-//		ps.productHitUpdate(vo);
-//		vo = ps.productSelect(vo);
-//		request.setAttribute("product", vo);
-		
-		return "product/productSelect.jsp";
+		ProductService ps = new ProductServiceImpl();
+		ProductVO vo = new ProductVO();
+		vo.setProductId(Integer.valueOf("productId"));
+
+		int n = ps.productDelete(vo);
+
+		if (n != 0)
+			request.setAttribute("message", "게시글이 삭제 되었습니다.");
+		else
+			request.setAttribute("message", "게시글 삭제에 실패했습니다.");
+
+		return null;
 	}
 
 }
