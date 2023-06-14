@@ -7,14 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div align="center">
-		<h1>관리자 마이페이지</h1>
-	</div>
-	<div>
-		<ul>
-			<li><a href="#">회원 조회</a></li>
-			<li><a href="#">신고 조회</a></li>
-		</ul>
-	</div>
+	<script type="text/javascript">
+		alert("${message }")
+		location.href="memberLoginForm.do";
+	</script>
+	
 </body>
 </html>

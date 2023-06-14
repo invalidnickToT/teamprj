@@ -8,6 +8,5 @@
 </head>
 <body>
 
-<a href="memberLoginForm.do"><h1>로그인이이아이너리ㅓㅇ라ㅣㄴ</h1></a>
 </body>
 </html>
