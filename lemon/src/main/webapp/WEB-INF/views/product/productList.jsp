@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,55 +8,43 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div align="center">
-
-		<div>
-			<h1>게시글 목록</h1>
-		</div>
-		<div>
-			<table border="1">
-				<thead>
-					<tr>
-						<th >게시물 번호</th>
-						<th >제목</th>
-						<th >작성일자</th>
-						<th >제품가격</th>
-						<th >조회수</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${notices }" var="n">
-						<tr onmouseover='this.style.background="#9fff80";'
-							onmouseleave='this.style.background="#FFFFFF";'
-							onclick="noticeChois(${n.noticeId })">
-							<td align="center">${n.noticeId }</td>
-							<td align="center">${n.noticeWriter }</td>
-							<td>${n.noticeTitle }</td>
-							<td align="center">${n.noticeWdate }</td>
-							<td align="center">${n.noticeHit }</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+	<div id="fh5co-product">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<span>Cool Stuff</span>
+					<h2>Products.</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+				<c:forEach items = "${products}" var = "p">
+					<div class="product">
+						<div onclick="productChoice(${p.productId})" class="product-grid" style="background-image:url(images/product-1.jpg);"></div>
+					</div>
+						<div class="desc">
+							<h3><a onclick="productChoice(${p.productId})">${p.productTitle}</a></h3>
+							<span class="price">${p.productPrice}</span>
+						</div>
+				</c:forEach>
 		</div>
 		<br>
 		<div>
 			<c:if test="${not empty id }">
-				<button type="button" onclick="location.href='noticeInsertForm.do'">새글작성</button>
+				<p>
+					<a href="#" class="btn btn-primary btn-outline btn-lg">글 작성</a>
+				</p>
 			</c:if>
 		</div>
 		<div>
-			<form id="frm" action="noticeSelect.do" method="post">
-				<input type="hidden" id="noticeId" name="noticeId">
+			<form id="frm" action="productSelect.do" method="post">
+				<input type="hidden" id="productId" name="productId">
 			</form>
 		</div>
 	</div>
 	<script type="text/javascript">
-	function noticeChois(id) {
-//		let url = 'noticeSelect.do?noticeId='+ id;
-//		location.href = url;
+	function productChoice(id) {
 		let frm = document.getElementById("frm");
-		frm.noticeId.value = id;
+		frm.productId.value = id;
 		frm.submit();
 	}
 </script>

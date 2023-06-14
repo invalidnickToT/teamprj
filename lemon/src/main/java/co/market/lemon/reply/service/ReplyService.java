@@ -6,12 +6,12 @@ public interface ReplyService {
 	
 	List<ReplyVO> replyList(int productId);
 	
-	ReplyVO selectReply(int productId);
+	ReplyVO replySelect(int productId);
 	
-	int insertReply(ReplyVO vo);
+	int replyInsert(ReplyVO vo);
 	
-	int updateReply(ReplyVO vo);
+	int replyUpdate(ReplyVO vo);
 	
-	int deleteReply(ReplyVO vo);
+	int replyDelete(ReplyVO vo);
 
 }

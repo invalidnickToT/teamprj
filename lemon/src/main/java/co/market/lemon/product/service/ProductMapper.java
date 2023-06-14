@@ -12,8 +12,6 @@ public interface ProductMapper {
 	int productUpdate(ProductVO vo);
 
 	int productDelete(ProductVO vo);
-
-	ProductVO productLogin(ProductVO vo);
 	
 	int productHitUpdate(ProductVO vo);
 }

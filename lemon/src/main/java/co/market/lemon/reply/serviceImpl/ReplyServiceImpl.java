@@ -20,27 +20,27 @@ public class ReplyServiceImpl implements ReplyService {
 	}
 
 	@Override
-	public ReplyVO selectReply(int productId) {
+	public ReplyVO replySelect(int productId) {
 		// TODO Auto-generated method stub
-		return map.selectReply(productId);
+		return map.replySelect(productId);
 	}
 
 	@Override
-	public int insertReply(ReplyVO vo) {
+	public int replyInsert(ReplyVO vo) {
 		// TODO Auto-generated method stub
-		return map.insertReply(vo);
+		return map.replyInsert(vo);
 	}
 
 	@Override
-	public int updateReply(ReplyVO vo) {
+	public int replyUpdate(ReplyVO vo) {
 		// TODO Auto-generated method stub
-		return map.updateReply(vo);
+		return map.replyUpdate(vo);
 	}
 
 	@Override
-	public int deleteReply(ReplyVO vo) {
+	public int replyDelete(ReplyVO vo) {
 		// TODO Auto-generated method stub
-		return map.deleteReply(vo);
+		return map.replyDelete(vo);
 	}
 
 }

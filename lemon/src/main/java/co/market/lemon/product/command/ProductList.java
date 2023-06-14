@@ -13,7 +13,7 @@ import co.market.lemon.product.serviceImpl.ProductServiceImpl;
 
 public class ProductList implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse reponse) {
-		ProductService ps = (ProductService) new ProductServiceImpl();
+		ProductService ps = new ProductServiceImpl();
 		List<ProductVO> products = new ArrayList<>();
 		products = ps.productSelectList();
 		
