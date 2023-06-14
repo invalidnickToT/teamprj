@@ -50,9 +50,9 @@
 				</div>
 				<br>
 				<div>
-					<input type="submit" value="등록">&nbsp;&nbsp; <input
-						type="reset" value="취소">&nbsp;&nbsp; <input type="button"
-						onclick="location.href='main.do'" value="홈">
+					<input type="submit" value="등록">&nbsp;&nbsp; 
+					<input type="reset" value="취소">&nbsp;&nbsp; 
+					<input type="button" onclick="location.href='main.do'" value="홈">
 				</div>
 			</form>
 		</div>
