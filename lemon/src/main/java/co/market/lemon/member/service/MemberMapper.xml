@@ -15,32 +15,24 @@
 		</if>		
 	</select>
 	
-	<insert id="memberInsert">
+	<insert id="memberInsert" parameterType="co.market.lemon.member.service.MemberVO">
 		INSERT INTO MEMBER
 		VALUES (#{memberId}, #{memberPw}, #{memberName}, #{memberTel}, 'N', 0)
 	</insert>
 	
-	<update id="memberUpdate">	
-		<if test="memberPw != null">
+	<update id="memberUpdate" parameterType="co.market.lemon.member.service.MemberVO">	
 		UPDATE MEMBER
-		SET MEMBER_PW = #{memberPw}
+		<set> 
+			<if test="memberPw != null">MEMBER_PW = #{memberPw},</if>
+			<if test="memberName != null">MEMBER_NAME = #{memberName},</if>
+			<if test="memberTel != null">MEMBER_TEL = #{memberTel}</if>
+		</set>
 		WHERE MEMBER_ID = #{memberId}
-		</if>	
-		
-		<if test="memberName != null">
-		UPDATE MEMBER
-		SET MEMBER_NAME = #{memberName}
-		WHERE MEMBER_ID = #{memberId}
-		</if>	
-		
-		<if test="memberTel != null">
-		UPDATE MEMBER
-		SET MEMBER_TEL = #{memberTel}
-		WHERE MEMBER_ID = #{memberId}	
-		</if>
 	</update>
 	
-	<delete id="memberDelete">
+	<delete id="memberDelete" parameterType="co.market.lemon.member.service.MemberVO">
+		DELETE FROM MEMBER
+		WHERE MEMBER_ID = #{memberId}
 	</delete>
 	
 	<select id="memberLogin" resultType="co.market.lemon.member.service.MemberVO">

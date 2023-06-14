@@ -10,7 +10,7 @@ public class MemberDeleteForm implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 
-		return "member/memberDelete";
+		return "mypage/memberDelete";
 	}
 
 }

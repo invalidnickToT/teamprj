@@ -7,17 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div><h1>마이페이지</h1></div>
-	<div>
+	<div align="center">
+		<div><h1>마이페이지</h1></div>
 		<div>
-			<a href="#">${name}</a>
-			<a href="#">${grade}</a>
-			<a href="memberUpdateForm.do">회원정보수정</a>
+			<div>
+				<a href="#">${name}</a>&nbsp;&nbsp;
+				<a href="#">${grade}</a>&nbsp;&nbsp;
+				<a href="memberUpdateForm.do">회원정보수정</a>
+			</div>
+			<div><a href="dealList">거래내역</a></div>
+			<div><a href="#">찜목록</a></div>
+			<div><a href="#">최근본상품</a></div>	
 		</div>
-		<div><a href="dealList">거래내역</a></div>
-		<div><a href="#">찜목록</a></div>
-		<div><a href="#">최근본상품</a></div>
-	
 	</div>
 </body>
 </html>

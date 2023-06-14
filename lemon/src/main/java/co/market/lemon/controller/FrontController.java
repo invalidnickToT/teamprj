@@ -77,9 +77,8 @@ public class FrontController extends HttpServlet {
 		map.put("/adminMypage.do", new AdminMypage());
 
 
+
     //혜련zone
-
-
 		map.put("/productList.do", new ProductList());
 		map.put("/productInsertForm.do", new ProductInsertForm());
 		map.put("/productInsert.do", new ProductInsert());
