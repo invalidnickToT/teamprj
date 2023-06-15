@@ -18,13 +18,14 @@ public class MemberDelete implements Command {
 		HttpSession session = request.getSession();
 
 		vo.setMemberId((String) session.getAttribute("id"));
-		
 		int n = ms.memberDelete(vo);
 		if(n != 0) {
 			request.setAttribute("message", "회원 탈퇴가 완료되었습니다.");
 		} else {
 			request.setAttribute("message", "회원 탈퇴를 실패하였습니다.");
 		}
+		
+		session.invalidate();
 		return "member/memberMessage";
 	}
 	
