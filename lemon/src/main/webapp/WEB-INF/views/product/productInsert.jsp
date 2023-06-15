@@ -17,7 +17,7 @@
 			<div>
 				<table border="1">
 					<tr>
-						<th>* 제품 카테고리</th>
+						<th>* 상품 분류</th>
 						<!-- 	select tag쓰고 싶어요 -->
 						<td><input type="text" id="productCategory"
 							name="productCategory" required="required"></td>
@@ -37,7 +37,7 @@
 							required="required"></td>
 					</tr>
 					<tr>
-						<th>* 판매 가격</th>
+						<th>* 상품 가격</th>
 						<td><input type="number" id="productPrice"
 							name="productPrice" required="required"></td>
 					</tr>
@@ -47,6 +47,11 @@
 							name="productSubject" required="required"></td>
 					</tr>
 				</table>
+			</div>
+			<div>
+				<input type="submit" value="저장">&nbsp;&nbsp;
+				<input type="reset" value="취소">&nbsp;&nbsp;
+				<input type="button" value="목록" onclick="location.href='productList.do'">
 			</div>
 		</form>
 	</div>

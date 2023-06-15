@@ -7,14 +7,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Response.Write("
-	<script>
-		alert('삭제되었습니다.');
-	</script>
-	"); Response.Write("
-	<script>
-		location.href = 'productList.jsp';
-	</script>
-	");
+	<div>
+		<h1>제품삭제</h1>
+	</div>
+	<div>
+		<input type="hidden" name="productId" value="${product.productId }">
+	</div>
+	<div>
+		<input type=button id="productId" name="productId" value="삭제"
+			onclick="location.href='productSelect'">
+	</div>
+
 </body>
 </html>
+
+<!-- db받아오는 부분필요 -->

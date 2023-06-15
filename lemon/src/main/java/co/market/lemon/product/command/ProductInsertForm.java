@@ -9,7 +9,7 @@ public class ProductInsertForm implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		return "product/ProductInsert";
+		return "product/productInsert";
 	}
 
 }
