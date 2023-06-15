@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.market.lemon.adminpage.command.AdminMemberDelete;
 import co.market.lemon.adminpage.command.AdminMypage;
 import co.market.lemon.adminpage.command.MemberReportList;
 import co.market.lemon.adminpage.command.MemberSelect;
@@ -80,6 +81,7 @@ public class FrontController extends HttpServlet {
 		map.put("/memberSelectList.do", new MemberSelectList());
 		map.put("/memberReportList.do", new MemberReportList());
 		map.put("/memberSelect.do", new MemberSelect());
+		map.put("/adminMemberDelete.do", new AdminMemberDelete());
 
 
 
