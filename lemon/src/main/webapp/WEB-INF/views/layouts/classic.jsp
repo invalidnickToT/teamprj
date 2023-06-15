@@ -63,7 +63,10 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
+	
+	
+<!-- 	내가 따로 추가한 css -->
+	<link rel="stylesheet" href="css/board.css">
 	</head>
 	<body>
 		
