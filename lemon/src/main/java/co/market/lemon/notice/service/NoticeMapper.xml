@@ -3,18 +3,20 @@
 <mapper namespace="co.market.lemon.notice.service.NoticeMapper">
 	<select id="noticeSelectList"
 		resultType="co.market.lemon.notice.service.NoticeVO">
-		select * from notice
+		select * from notice  order by notice_id
 	</select>
 	<select id="noticeSelect" resultType="co.market.lemon.notice.service.NoticeVO">
 		select * from notice where notice_id=#{noticeId}
 	</select>
 	
 	<insert id="noticeInsert">
-	insert into notice values(notice_seq.nextval,#{noticeTitle},#{noticeSubject},#{noticeWdate} )
+	insert into notice values
+	(Max(NVL(noticeId,0)+1),#{noticeTitle},#{noticeSubject},SYSDATE )
 	</insert>
 	
 	<update id="noticeUpdate" >
-	
+		update notice set notice_title=#{noticeTitle}, 
+		notice_subject=#{noticeSubject} where notice_id=#{noticeId}
 	</update>
 	<delete id="noticeDelete">
 	delete notice where notice_id=#{noticeId}

@@ -1,6 +1,7 @@
 package co.market.lemon.controller;
 
 import java.io.IOException;
+
 import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
@@ -30,6 +31,7 @@ import co.market.lemon.mypage.command.MemberUpdate;
 import co.market.lemon.mypage.command.MemberUpdateForm;
 import co.market.lemon.mypage.command.Mypage;
 import co.market.lemon.notice.command.noticeDelete;
+import co.market.lemon.notice.command.noticeInsert;
 import co.market.lemon.notice.command.noticeInsertForm;
 import co.market.lemon.notice.command.noticeMain;
 import co.market.lemon.notice.command.noticeSelect;
@@ -110,6 +112,7 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeUpdate.do", new noticeUpdate());
 		map.put("/noticeDelete", new noticeDelete());
 		map.put("/noticeUpdateForm.do", new noticeUpdateForm());
+		map.put("/noticeInsert.do",new noticeInsert());
 
 
 		//나리zone

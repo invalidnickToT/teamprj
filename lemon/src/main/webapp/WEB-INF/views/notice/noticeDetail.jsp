@@ -22,14 +22,18 @@
 			</tr>
 		</tbody>
 	</table>
-	
+	<form id="frm" action="noticeUpdateForm.do" method="post">
+	<input type="hidden" name="noticeId" value="${notice.noticeId }">
 	<c:if test="${grade eq 'A'}">
-	<button type="button" onclick="location.href='noticeUpdateForm.do'">
-	수정
-	</button>
+	<input type="submit" value="수정">
 	<button type="button" onclick="location.href='noticeDelete.do'">
 	삭제
 	</button>
 	</c:if>
+	
+	</form>
+	
+	
+	
 </body>
 </html>
