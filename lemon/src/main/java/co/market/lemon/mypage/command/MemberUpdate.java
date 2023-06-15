@@ -16,12 +16,12 @@ public class MemberUpdate implements Command {
 		MemberService ms = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		HttpSession session = request.getSession();
-		session.setAttribute("id", vo.getMemberId());
 		
 		vo.setMemberPw(request.getParameter("memberPw"));
 		vo.setMemberName(request.getParameter("memberName"));
 		vo.setMemberTel(request.getParameter("memberTel"));
-		vo.setMemberId(request.getParameter("memberId"));
+		vo.setMemberId((String) session.getAttribute("id"));
+		
 		
 		int n = ms.memberUpdate(vo);
 		if(n != 0) {

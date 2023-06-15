@@ -27,6 +27,9 @@ public class MemberLogin implements Command {
 			session.setAttribute("name", vo.getMemberName());
 			session.setAttribute("grade", vo.getMemberGrade());
 			session.setAttribute("pw", vo.getMemberPw());
+			session.setAttribute("tel", vo.getMemberTel());
+			
+			
 			if (vo.getMemberGrade().equals("T")) {
 				return "main/mainTLoginPage";
 			} else {

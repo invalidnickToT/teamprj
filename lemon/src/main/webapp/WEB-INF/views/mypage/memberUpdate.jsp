@@ -11,7 +11,7 @@
 		<div><h1>회원 정보 수정</h1></div>
 		
 		<div>
-			<form id="frm" action="memberUpdate.do" method="post" onsubmit="return fnSubmit()" onreset="return fnReset()">		
+			<form id="frm" action="memberUpdate.do" method="post" onsubmit="return pwCheck()" onreset="return fnReset()">		
 				<div>
 					<table>
 						<tr>
@@ -23,19 +23,25 @@
 						<tr>
 							<td>이름</td>
 							<td>
-								<input type="text" id="memberName" name="memberName" value="${member.memberName }">
+								<input type="text" id="memberName" name="memberName" value="${name}" required="required">
 							</td>
 						</tr>
 						<tr>
 							<td>비밀번호</td>
 							<td>
-								<input type="password" id="memberPw" name="memberPw" value="${member.memberPw }">
+								<input type="password" id="memberPw" name="memberPw" required="required">
+							</td>
+						</tr>
+						<tr>
+							<td>비밀번호 확인</td>
+							<td>
+								<input type="password" id="passwordCheck" name="passwordCheck" required="required">
 							</td>
 						</tr>
 						<tr>
 							<td>연락처</td>
 							<td>
-								<input type="text" id="memberTel" name="memberTel" value="${member.memberTel }">
+								<input type="text" id="memberTel" name="memberTel" value="${tel}" required="required">
 							</td>
 						</tr>
 					</table><br>
@@ -50,21 +56,18 @@
 	</div>	
 	
 	<script type="text/javascript">
-		function fnSubmit() {
-			if(confirm("정말 수정하시겠습니까?")) {
-				return true;
-			}
-			return false;
+		function pwCheck(){
+			let frm = document.getElementById("frm");
+			if(frm.memberPw.value != frm.passwordCheck.value){
+				alert("비밀번호가 일치하지 않습니다.");
+				frm.memberPw.value ="";
+				frm.passwordCheck.value="";
+				frm.memberPw.focus();
+				return false;
+			} 
+			return true;
 		}
-		
-		function fnReset() {
-			if(confirm("정말 초기화하시겠습니까?")) {
-				return true;
-			}
-			return false;
-		}
-		
-		
+	
 	</script>
 </body>
 
