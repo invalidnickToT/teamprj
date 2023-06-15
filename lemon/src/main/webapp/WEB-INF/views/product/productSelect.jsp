@@ -59,8 +59,12 @@
 								<c:if test="${name eq product.productWriter}">
 									<a href="productUpdateForm.do" class="btn btn-primary btn-outline btn-lg">수정</a>
 									<a href="productDelete.do" class="btn btn-primary btn-outline btn-lg">삭제</a>
+
+									<!-- 									id 받아오는거 해주세여... -->
+
 								</c:if>
 									<a href="productList.do" class="btn btn-primary btn-outline btn-lg">목록</a>
+
 							</p>
 						</div>
 					</div>
