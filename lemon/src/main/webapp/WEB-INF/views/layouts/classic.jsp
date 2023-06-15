@@ -75,7 +75,6 @@
 	<div id="page">
 	<tiles:insertAttribute name="header" />
 	<tiles:insertAttribute name="body" />
-	<tiles:insertAttribute name="footer" />
 	</div>
 
 	<div class="gototop js-top">
