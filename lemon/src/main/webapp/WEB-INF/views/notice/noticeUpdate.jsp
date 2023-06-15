@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +12,13 @@
 	<form action="noticeUpdate.do" id="frm" method="post">
 		<table>
 		<tr>
-		<td>제목: <input type="text" id="notieTitle" name="notieTitle"></td>
+		<td>제목: <input type="text" id="noticeTitle" name="noticeTitle" value="${notice.noticeTitle }"></td>
 		</tr>
 		<tr>
-		<td><textarea id="noticeSubject" name="noticeSubject" placeholder="변경할 내용을 입력하세요"></textarea></td>
+		<td><input type="text" id="noticeSubject" name="noticeSubject" value="${notice.noticeSubject }"></td>
 		</tr>
 		</table>
-		<input type="hidden" name="noticeId" value="noticeId">
+		<input type="hidden" name="noticeId" value="${notice.noticeId }">
 		<input type="submit" value="등록">
 	</form>
 </body>
