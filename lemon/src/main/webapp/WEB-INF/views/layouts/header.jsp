@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,23 +18,30 @@
 				</div>
 				<div class="col-md-6 col-xs-6 text-center menu-1">
 					<ul>
-						<li class="has-dropdown"><a href="productList.do">의류</a>
+						<li class="has-dropdown"><a href="#">패션</a>
 							<ul class="dropdown">
-								<li><a href="single.html">Single Shop</a></li>
+								<li><a href="productListBuy.do">삽니다</a></li>
+								<li><a href="productListSell.do">팝니다</a></li>
 							</ul></li>
-						<li><a href="#">뷰티</a></li>
-						<li class="has-dropdown"><a href="#">전자</a>
+						<li class="has-dropdown"><a href="#">식품</a>
 							<ul class="dropdown">
-								<li><a href="#">Web Design</a></li>
-								<li><a href="#">eCommerce</a></li>
-								<li><a href="#">Branding</a></li>
-								<li><a href="#">API</a></li>
+								<li><a href="productListBuy.do">삽니다</a></li>
+								<li><a href="productListSell.do">팝니다</a></li>
 							</ul></li>
-						<li><a href="#">인테리어</a></li>
-						<li><a href="#">식품</a></li>
-						<li><a href="#">잡화</a></li>
-						<li><a href="#">기타</a></li>
-						<li><a href="noticeMain.do">공지사항</a></li>
+
+
+						<li class="has-dropdown"><a href="#">리빙</a>
+							<ul class="dropdown">
+								<li><a href="productListBuy.do">삽니다</a></li>
+								<li><a href="productListSell.do">팝니다</a></li>
+							</ul></li>
+
+						<li class="has-dropdown"><a href="#">기타</a>
+							<ul class="dropdown">
+								<li><a href="productList.do">삽니다</a></li>
+								<li><a href="productList.do">팝니다</a></li>
+							</ul></li>
+						<li class="has-dropdown"><a href="noticeMain.do">공지사항</a>
 					</ul>
 				</div>
 				<div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">

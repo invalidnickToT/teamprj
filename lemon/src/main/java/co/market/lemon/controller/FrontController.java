@@ -39,9 +39,11 @@ import co.market.lemon.notice.command.noticeSelect;
 import co.market.lemon.notice.command.noticeUpdate;
 import co.market.lemon.notice.command.noticeUpdateForm;
 import co.market.lemon.product.command.ProductDelete;
+import co.market.lemon.product.command.ProductDeleteForm;
 import co.market.lemon.product.command.ProductInsert;
 import co.market.lemon.product.command.ProductInsertForm;
-import co.market.lemon.product.command.ProductList;
+import co.market.lemon.product.command.ProductListBuy;
+import co.market.lemon.product.command.ProductListSell;
 import co.market.lemon.product.command.ProductSelect;
 import co.market.lemon.product.command.ProductUpdate;
 import co.market.lemon.product.command.ProductUpdateForm;
@@ -88,13 +90,16 @@ public class FrontController extends HttpServlet {
 
 
     	//혜련zone
-		map.put("/productList.do", new ProductList());
+		map.put("/productListBuy.do", new ProductListBuy());
+		map.put("/productListSell.do", new ProductListSell());
 		map.put("/productInsertForm.do", new ProductInsertForm());
 		map.put("/productInsert.do", new ProductInsert());
 
 		map.put("/productUpdateForm.do", new ProductUpdateForm());
 		map.put("/productUpdate.do", new ProductUpdate());
+		map.put("/productDeleteForm.do", new ProductDeleteForm());
 		map.put("/productDelete.do", new ProductDelete());
+		
 	
 
 

@@ -14,12 +14,14 @@ public class ProductUpdate implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		ProductService ps = new ProductServiceImpl();
 		ProductVO vo = new ProductVO();
+		vo.setProductId(Integer.valueOf(request.getParameter("productId")));
+		vo.setProductCategory(request.getParameter("productCategory"));
 		vo.setProductInfo(request.getParameter("productInfo"));
-		vo.setProductPrice(Integer.valueOf("productPrice"));
+		vo.setProductWriter(request.getParameter("productWriter"));
+		vo.setProductPrice(Integer.valueOf(request.getParameter("productPrice")));
 		vo.setProductTitle(request.getParameter("productTitle"));
 		vo.setProductSubject(request.getParameter("productSubject"));
 		vo.setProductState(request.getParameter("productState"));
-
 		int n = ps.productUpdate(vo);
 
 		if (n != 0)
