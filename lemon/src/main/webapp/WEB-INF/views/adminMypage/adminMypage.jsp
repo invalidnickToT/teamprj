@@ -10,7 +10,7 @@
 	<div align="center">
 		<h1>관리자 마이페이지</h1>
 	</div>
-	<div>
+	<div align="center">
 		<ul>
 			<li><a href="memberSelectList.do">회원 조회</a></li>
 			<li><a href="memberReportList.do">신고 조회</a></li>

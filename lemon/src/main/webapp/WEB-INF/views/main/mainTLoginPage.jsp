@@ -8,7 +8,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-	alert("신고를 받아 경고받은 회원입니다. 3회 경고받을 시 자동 탈퇴처리되니 주의해 주세요.");
+	alert("신고를 받아 경고받은 회원입니다. \n 3회 경고받을 시 자동 탈퇴처리되니 주의해 주세요.");
 	</script>
 	<aside id="fh5co-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
