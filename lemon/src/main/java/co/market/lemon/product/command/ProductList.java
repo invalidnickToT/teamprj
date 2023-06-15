@@ -15,6 +15,7 @@ public class ProductList implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse reponse) {
 		ProductService ps = new ProductServiceImpl();
 		List<ProductVO> products = new ArrayList<>();
+		products = ps.productSelectList();
 		
 		request.setAttribute("products", products);
 		return "product/productList";
