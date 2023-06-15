@@ -18,6 +18,7 @@ public class MemberSelect implements Command {
 		
 		vo= ms.memberSelect(vo);
 		request.setAttribute("member", vo);
+		System.out.println(vo);
 		return "adminMypage/memberSelect";
 	}
 
