@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form id="frm" action="memberSelect.do">
+	<form id="frm"  action="memberSelect.do" method="post">
 		<div align="center">
 			<h3>회원 조회</h3>
 			<input type="text" id="memberId" name="memberId" placeholder="Search..">
