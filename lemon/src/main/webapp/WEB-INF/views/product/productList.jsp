@@ -32,7 +32,7 @@
 		<div>
 			<c:if test="${not empty id }">
 				<p>
-					<a href="#" class="btn btn-primary btn-outline btn-lg">글 작성</a>
+					<a href="productInsertForm.do" class="btn btn-primary btn-outline btn-lg">글 작성</a>
 				</p>
 			</c:if>
 		</div>

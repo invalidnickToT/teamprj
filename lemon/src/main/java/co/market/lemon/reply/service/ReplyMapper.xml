@@ -12,7 +12,7 @@
 	</select>
 	
 	<insert id="replyInsert">
-		INSERT INTO REPLY VALUES (#{productId}, REPLY_SEQ.NEXTVAL, #{replyWriter}, #{replySubject}, #{replySecret})
+		INSERT INTO REPLY VALUES (#{productId}, REPLY_SEQ.NEXTVAL, #{replyWriter}, #{replySubject}, SYSDATE, #{replySecret})
 	</insert>
 	
 	<update id="replyUpdate" parameterType="co.market.lemon.reply.service.ReplyVO">

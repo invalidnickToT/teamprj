@@ -57,9 +57,11 @@
 									<a href="#" class="btn btn-primary btn-outline btn-lg">찜하기</a>
 								</c:if>
 								<c:if test="${name eq product.productWriter}">
-									<a href="productUpdate.do" class="btn btn-primary btn-outline btn-lg">수정</a>
+									<a href="productUpdateForm.do" class="btn btn-primary btn-outline btn-lg">수정</a>
 									<a href="productDelete.do" class="btn btn-primary btn-outline btn-lg">삭제</a>
+
 									<!-- 									id 받아오는거 해주세여... -->
+
 								</c:if>
 									<a href="productList.do" class="btn btn-primary btn-outline btn-lg">목록</a>
 
@@ -106,10 +108,13 @@
 										</c:forEach>
 										<c:if test="${not empty id }">
 											<form name="replyForm" method="post">
+												<input type="hidden" id="productId" name="productId" value="${p.productId}" />
 												<div>
 													<label for="replyWriter">댓글 작성자</label><input type="text" id="replyWriter" name="replyWriter" value=${name} readonly="readonly" />
 													<br>
 													<label for="replyWriter">댓글 내용</label><input type="text" id="replySubject" name="replySubject" />
+													<br>
+													<label for="replySecret">비밀 댓글</label>
 												</div>
 												<div>
 													<button type="button" class="btn btn-primary btn-outline btn-lg">댓글 작성</a>
@@ -126,5 +131,8 @@
 			</div>
 		</div>
 	</div>
+	<script>
+	
+	</script>
 </body>
 </html>
