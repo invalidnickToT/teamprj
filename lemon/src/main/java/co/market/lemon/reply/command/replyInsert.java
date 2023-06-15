@@ -18,9 +18,15 @@ public class replyInsert implements Command {
 		vo.setReplyWriter(request.getParameter("replyWriter"));
 		vo.setReplySubject(request.getParameter("replySubject"));
 		vo.setReplySecret(request.getParameter("replySecret"));
+		if (vo.getReplySecret() == null) {
+			vo.setReplySecret("n");
+		} else if (vo.getReplySecret().equals("on")) {
+			vo.setReplySecret("y");
+		}
+
 		rs.replyInsert(vo);
 		
-		return "redirect:/product/productSelect";
+		return "product/productSelect";
 	}
 
 }
